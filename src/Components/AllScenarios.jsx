@@ -115,7 +115,7 @@ const AllScenarios = () => {
                 const vehicle = vehicles.find((v) => v.id === scenario.id);
                 return (
                   <tr key={scenario.id}>
-                    <td>{scenario.id}</td>
+                    <td>{scenario.serialNumber}</td>
                     <td>{scenario.name}</td>
                     <td>{vehicle ? vehicle.count : 0}</td>
                     <td>

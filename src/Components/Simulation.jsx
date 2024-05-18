@@ -92,7 +92,7 @@ const Simulation = ({ scenario, vehicles }) => {
               top: `${vehicle.posY}px`,
             }}
           >
-            {vehicle.id}
+            {vehicle.serialNumber}
           </div>
         ))}
       </div>

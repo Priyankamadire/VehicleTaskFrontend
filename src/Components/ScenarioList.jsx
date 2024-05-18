@@ -29,7 +29,7 @@ function ScenarioList({ onSelectScenario }) {
               onClick={() => onSelectScenario(scenario)}
               style={rowStyle}
             >
-              <td style={cellStyle}>{scenario.id}</td>
+              <td style={cellStyle}>{scenario.serialNumber}</td>
               <td style={cellStyle}>{scenario.name}</td>
             </tr>
           ))}

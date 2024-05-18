@@ -42,7 +42,7 @@ const DisplayVehicle = ({ scenario, vehicles }) => {
           <tbody>
             {movingVehicles.map((vehicle) => (
               <tr key={vehicle.id}>
-                <td>{vehicle.id}</td>
+                <td>{vehicle.serialNumber}</td>
                 <td>{vehicle.name}</td>
                 <td>{vehicle.posX}</td>
                 <td>{vehicle.posY}</td>

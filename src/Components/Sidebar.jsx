@@ -7,7 +7,7 @@ function Sidebar({ isOpen, toggleSidebar, toggleDashboard }) {
     <>
       <div className="toggle-dashboard-button" onClick={toggleDashboard}></div>
       <button className="toggle-button" onClick={toggleSidebar}>
-        ☰
+        toggle
       </button>
       <div className={`sidebar ${isOpen ? "open" : "closed"}`}>
         <h2>Dashboard</h2>
