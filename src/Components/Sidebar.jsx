@@ -10,7 +10,7 @@ function Sidebar({ isOpen, toggleSidebar, toggleDashboard }) {
         toggle
       </button>
       <div className={`sidebar ${isOpen ? "open" : "closed"}`}>
-        <h2>Dashboard</h2>
+        <h2>SideBar</h2>
         <ul className="sidebar-list">
           <li>
             <NavLink exact to="/" activeClassName="active">
