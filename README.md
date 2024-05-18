@@ -1,3 +1,16 @@
+Problem Statement
+
+Develop a web application using React.js that enables users to create, display, update, and delete scenarios and vehicles. Each scenario should have fields for scenario ID, name, and time, and can contain multiple vehicles. Vehicles should have fields for vehicle ID, name, initial position (X, Y), speed, and direction (Towards, Backwards, Upwards, Downwards). Implement a Node.js server to handle GET, POST, PUT, and DELETE requests, storing the data in a JSON file. The application should feature a sidebar for navigation and allow users to select a scenario and start a simulation where vehicles move based on their parameters. Ensure vehicle positions do not exceed the container boundaries, hiding them if they do. Deploy the completed application and provide a detailed README.md file with installation and usage instructions.
+Backend Deployed Link : https://vehicletaskbackend.onrender.com/   from here json data is stored and served 
+API documentation (POSTMAN) : https://documenter.getpostman.com/view/25358745/2sA3QmCZbf   all the methods defined clearly (POST,GET,PUT,DELETE)
+Video explanation : https://drive.google.com/file/d/1ti42EWVowupjcsLXEszuafRALqb1G3Nd/view?usp=sharing  
+React Deployed Link : https://vehicle-simulation-phi.vercel.app/
+
+To clone this Project
+Step 1 : npx create-react-app myapp
+Step 2 : npm install package-name (install all packages from package.json)
+Step 3 : copy all files
+Step 4 : npm start
 
 Home Page to Select Scenario and start Simulation
 ![Screenshot 2024-05-19 040908](https://github.com/Priyankamadire/VehicleTaskFrontend/assets/108828579/a07e586a-0a6f-4778-aed2-c001adf8c8db)
