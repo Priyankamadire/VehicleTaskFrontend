@@ -1,0 +1,22 @@
+/* src/App.css */
+.App {
+  display: flex;
+}
+
+.Sidebar {
+  width: 200px;
+  padding: 10px;
+  border-right: 1px solid #ccc;
+}
+
+.SimulationArea {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+}
+
+.SimulationArea div {
+  position: absolute;
+  transition: left 0.1s linear, top 0.1s linear;
+}

@@ -1,0 +1,33 @@
+.home-container {
+    margin-top: 20px; /* Add margin to create space between the top of the page and the content */
+  }
+  
+  .main-content {
+    max-width: 800px; /* Set a maximum width for the content to prevent it from expanding too much */
+    margin: 20px auto; /* Center the content horizontally and add margin to create space around it */
+    padding: 20px; /* Add padding to create space inside the content */
+    background-color: #fff; /* Add a background color to the content area */
+    border-radius: 8px; /* Add border radius to create rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow for a subtle elevation effect */
+  }
+  
+  table {
+    width: 100%; /* Make the table fill the available width */
+    border-collapse: collapse; /* Collapse the borders between table cells */
+  }
+  
+  table th,
+  table td {
+    border: 1px solid #ccc; /* Add borders to table headers and cells */
+    padding: 8px; /* Add padding inside table cells */
+  }
+  
+  table th {
+    background-color: #f2f2f2; /* Add a background color to table headers */
+    text-align: left; /* Align text to the left within table headers */
+  }
+  
+  table tr:hover {
+    background-color: #f5f5f5; /* Change background color of table row on hover */
+  }
+  
