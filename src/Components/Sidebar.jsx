@@ -1,41 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
+import { FaTh, FaBars, FaPlus, FaGlobe, FaMotorcycle } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
+const Sidebar = ({ children }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => setIsOpen(!isOpen);
 
-function Sidebar({ isOpen, toggleSidebar, toggleDashboard }) {
+  const menuItem = [
+    {
+      path: "/",
+      name: "Home",
+      icon: <FaTh />,
+    },
+    {
+      path: "/add-scenario-form",
+      name: "Add Vehicle",
+      icon: <FaPlus />,
+    },
+    {
+      path: "/all-scenarios",
+      name: "All Scenarios",
+      icon: <FaGlobe />,
+    },
+    {
+      path: "/addvehicle",
+      name: "Add Vehicle",
+      icon: <FaMotorcycle />,
+    },
+  ];
+
   return (
-    <>
-      <div className="toggle-dashboard-button" onClick={toggleDashboard}></div>
-      <button className="toggle-button" onClick={toggleSidebar}>
-        toggle
-      </button>
-      <div className={`sidebar ${isOpen ? "open" : "closed"}`}>
-        <h2>SideBar</h2>
-        <ul className="sidebar-list">
-          <li>
-            <NavLink exact to="/" activeClassName="active">
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/add-scenario-form" activeClassName="active">
-              Add Scenario
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/all-scenarios" activeClassName="active">
-              All Scenarios
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/addvehicle" activeClassName="active">
-              Add Vehicle
-            </NavLink>
-          </li>
-        </ul>
+    <div className="container">
+      <div style={{ width: isOpen ? "200px" : "50px" }} className="sidebar">
+        <div className="top_section">
+          <h1 style={{ display: isOpen ? "block" : "none" }} className="logo">
+            Sidebar
+          </h1>
+          <div style={{ marginLeft: isOpen ? "50px" : "0px" }} className="bars">
+            <FaBars onClick={toggle} />
+          </div>
+        </div>
+        {menuItem.map((item, index) => (
+          <NavLink
+            to={item.path}
+            key={index}
+            className="link"
+            activeClassName="active"
+          >
+            <div className="icon">{item.icon}</div>
+            <div
+              style={{ display: isOpen ? "block" : "none" }}
+              className="link_text"
+            >
+              {item.name}
+            </div>
+          </NavLink>
+        ))}
       </div>
-    </>
+      <main>{children}</main>
+    </div>
   );
-}
+};
 
 export default Sidebar;
